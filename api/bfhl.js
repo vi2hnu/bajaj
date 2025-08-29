@@ -12,7 +12,7 @@ export default function handler(req, res) {
   
       const student_name = "vishnu";   
       const birthdate = "20091606";      
-      const email_id = "vishnu@xyz.com";   
+      const email_id = "vishnuvaradhan.kr2022@vitstudent.ac.in";   
       const roll_no = "22BCE00925";        
   
       const odds = [];
