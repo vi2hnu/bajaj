@@ -3,12 +3,16 @@ export default function handler(req, res) {
     return res.status(405).json({ is_success: false, message: "POST method required" })
   }
 
-  try {
-    if (!req.body || typeof req.body !== "object") {
-      return res.status(400).json({ is_success: false, message: "Invalid request body" })
-    }
+  if (!req.body || typeof req.body !== "object" || !("data" in req.body)) {
+    return res.status(400).json({ is_success: false, message: "Missing or invalid 'data' field" })
+  }
 
-    const input = Array.isArray(req.body.data) ? req.body.data : []
+  if (!Array.isArray(req.body.data)) {
+    return res.status(400).json({ is_success: false, message: "'data' must be an array" })
+  }
+
+  try {
+    const input = req.body.data
 
     const student_name = "vishnuvaradhan"
     const birthdate = "16062004"
