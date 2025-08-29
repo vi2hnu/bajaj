@@ -4,7 +4,7 @@
       { "src": "api/bfhl.js", "use": "@vercel/node" }
     ],
     "routes": [
-      { "src": "/bfhl", "dest": "api/bfhl.js" }
+      { "src": "/api/bfhl", "dest": "api/bfhl.js" }
     ]
   }
   
