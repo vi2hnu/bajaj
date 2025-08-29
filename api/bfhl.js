@@ -10,8 +10,8 @@ export default function handler(req, res) {
       const payload = req.body || {};
       const input = payload.data ?? [];
   
-      const student_name = "vishnu";   
-      const birthdate = "20091606";      
+      const student_name = "vishnuvaradhan";   
+      const birthdate = "16062004";      
       const email_id = "vishnuvaradhan.kr2022@vitstudent.ac.in";   
       const roll_no = "22BCE00925";        
   
